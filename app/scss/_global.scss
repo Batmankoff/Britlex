@@ -1,3 +1,25 @@
+html,
 body {
+  height: 100%;
+}
 
+body {
+  color: $default;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  @extend %poppins-400;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1370px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
