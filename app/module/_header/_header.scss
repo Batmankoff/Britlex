@@ -1,0 +1,38 @@
+.header {
+  padding: 55px 0 25px;
+  height: 150px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    &__list {
+      display: flex;
+      gap: 30px;
+    }
+
+    &__list-link {
+      @extend %poppins-500;
+      font-size: 20px;
+      line-height: 30px;
+      color: $accent;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .user-link {
+    display: inline-block;
+    padding: 15px 57px;
+    font-size: 24px;
+    line-height: 36px;
+    color: $black;
+    border: 2px solid $accent;
+    border-radius: 5px;
+  }
+}
