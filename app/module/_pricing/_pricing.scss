@@ -1,0 +1,61 @@
+.pricing {
+  padding: 94px 0 125px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 57px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 430px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-img {
+    height: 300px;
+    margin-bottom: 40px;
+  }
+
+  &__item-title {
+    @extend %poppins-600;
+    font-size: 30px;
+    line-height: 48px;
+    color: $accent;
+    margin-bottom: 20px;
+  }
+
+  &__item-text {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__item-price {
+    max-width: 240px;
+    font-size: 30px;
+    line-height: 45px;
+    color: $accent;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    span {
+      display: inline-block;
+      font-size: 18px;
+      line-height: 27px;
+      color: #546269;
+      margin-left: 8px;
+    }
+  }
+}
