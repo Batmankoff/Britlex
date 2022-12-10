@@ -23,3 +23,21 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.title {
+  @extend %poppins-600;
+  font-size: 48px;
+  line-height: 80px;
+  color: $black;
+}
+
+.btn {
+  display: inline-block;
+  @extend %poppins-500;
+  font-size: 20px;
+  line-height: 30px;
+  color: $white;
+  padding: 15px 50px;
+  background-color: $accent;
+  border-radius: 5px;
+}
