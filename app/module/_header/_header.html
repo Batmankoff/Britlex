@@ -1,10 +1,14 @@
 <header class="header">
+  <div class="dimming"></div>
   <div class="container">
     <div class="header__inner">
-      <a class="logo" href="#">
-        <img class="logo_img" src="images/logo.svg" alt="logo">
+      <a class="logo logo" href="#">
+        <img class="logo__img" src="images/logo.svg" alt="logo">
       </a>
       <nav class="menu">
+        <a class="logo menu__logo" href="#">
+          <img class="logo__img" src="images/logo.svg" alt="logo">
+        </a>
         <ul class="menu__list">
           <li class="menu__list-item">
             <a class="menu__list-link" href="#home">Home </a>
@@ -22,8 +26,15 @@
             <a class="menu__list-link" href="#contact">Contacts</a>
           </li>
         </ul>
+        <a class="menu__user-link" href="#">Let’s Talk</a>
+        <button class="menu__close">
+          <img class="menu__close-img" src="images/icons/close-menu.svg" alt="">
+        </button>
       </nav>
       <a class="user-link" href="#">Let’s Talk</a>
+      <button class="menu-open">
+        <img class="menu-open__img" src="images/icons/hamburger-menu.svg" alt="">
+      </button>
     </div>
   </div>
 </header>

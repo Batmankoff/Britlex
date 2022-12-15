@@ -4,6 +4,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 31px;
     border-top: 1px solid #C4C4C4;
   }
@@ -11,5 +12,43 @@
   &__copy {
     font-size: 24px;
     line-height: 36px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    padding: 66px 0 30px;
+
+    &__copy {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 60px 0 30px;
+
+    &__copy {
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+
+}
+
+@media (max-width: 575px) {
+  .footer {
+    &__inner {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    &__copy {
+      font-size: 11px;
+      line-height: 16px;
+    }
   }
 }

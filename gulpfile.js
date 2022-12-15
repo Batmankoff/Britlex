@@ -95,7 +95,8 @@ function images() {
 function build() {
   return src([
       'app/**/*.html',
-      'app/css/style.min.css',
+      '!app/module/**/*.html',
+      'app/css/*.css',
       'app/js/main.min.js'
     ], {
       base: 'app'
