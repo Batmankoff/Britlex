@@ -10,6 +10,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
+    grid-template-areas: "speaking writing reading"
+      "speaking listening listening";
     gap: 20px 18px;
   }
 
@@ -17,34 +19,45 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    padding: 40px;
+    padding: 30px;
     background-color: #F5F5F5;
     border-radius: 10px;
 
-
     &:nth-child(1) {
-      grid-row: span 2;
-
-
+      grid-area: speaking;
     }
 
-    &:nth-child(2),
-    &:nth-child(3) {
-      .skills__item-img {
+    &:nth-child(2) {
+      grid-area: writing;
+
+      .skills__item-box {
         height: 200px;
       }
+    }
 
+    &:nth-child(3) {
+      grid-area: reading;
+
+      .skills__item-box {
+        height: 200px;
+      }
     }
 
     &:nth-child(4) {
-      grid-column: span 2;
+      grid-area: listening;
       flex-direction: row-reverse;
-      justify-content: space-between;
     }
+
+  }
+
+  &__item-box {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 
   &__item-img {
-    object-fit: contain;
+    height: 100%;
   }
 
   &__item-title {
@@ -55,7 +68,146 @@
   }
 
   &__item-text {
-    margin: 10px 0 35px;
+    margin-bottom: 35px;
     max-width: 350px;
+  }
+}
+
+@media (max-width: 992px) {
+  .skills {
+    padding: 47px 0 53px;
+
+    &__title {
+      font-size: 36px;
+      margin-bottom: 53px;
+    }
+
+    &__items {
+      gap: 13px;
+    }
+
+    &__item-title {
+      font-size: 22px;
+    }
+
+    &__item-text {
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 20px;
+    }
+
+    &__item-link {
+      font-size: 18px;
+      line-height: 27px;
+      padding: 15px 40px;
+    }
+  }
+}
+
+@media (max-width: 852px) {
+  .skills {
+    padding: 50px 0 25px;
+
+    &__title {
+      font-size: 30px;
+      margin-bottom: 37px;
+    }
+
+    &__item {
+      padding: 20px;
+    }
+
+    &__item-title {
+      font-size: 20px;
+    }
+
+    &__item-text {
+      font-size: 13px;
+      line-height: 20px;
+      margin-bottom: 15px;
+    }
+
+    &__item-link {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 15px 40px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .skills {
+    &__items {
+      grid-template-areas:
+        "speaking writing"
+        "reading listening";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, auto);
+      gap: 30px;
+    }
+
+    &__item {
+      &:nth-child(4) {
+        flex-direction: column;
+      }
+    }
+
+    &__item-box {
+      height: 200px;
+    }
+
+    &__item-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1;
+    }
+
+    &__item-link {
+      margin: auto auto 0 0;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .skills {
+    padding: 96px 0 42px;
+
+    &__items {
+      grid-template-areas:
+        "speaking"
+        "writing"
+        "reading"
+        "listening";
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto);
+      gap: 20px;
+    }
+
+    &__item {
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        .skills__item-box {
+          height: auto;
+        }
+      }
+
+      &__item-title {
+        font-size: 18px;
+      }
+
+      &__item-text {
+        margin-bottom: 20px;
+      }
+
+      &__item-link {
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      &__item-box {
+        height: auto;
+      }
+    }
   }
 }

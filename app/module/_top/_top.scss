@@ -2,9 +2,20 @@
   margin-top: 100px;
 
   &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__content {
+    padding-top: 2rem;
+    padding-right: 3rem;
+  }
+
+  &__content-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
   }
 
   &__content-title {
@@ -12,27 +23,13 @@
     font-size: 64px;
     line-height: 80px;
     color: $black;
-    max-width: 546px;
-    padding-right: 123px;
     margin-bottom: 30px;
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 100px;
-      width: 126px;
-      height: 126px;
-      background-image: url('../images/icons/light-bulb.svg');
-    }
   }
 
   &__content-text {
     font-size: 24px;
     line-height: 36px;
     margin-bottom: 50px;
-    max-width: 546px;
   }
 
   &__content-link {
@@ -44,5 +41,141 @@
     background-color: $accent;
     border-radius: 15px;
 
+  }
+
+  &__box {
+    max-width: 661px;
+  }
+
+
+
+  &__img {
+    height: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .top {
+    &__content {
+      padding-top: 1rem;
+      padding-right: 2rem;
+    }
+
+    &__content-img {
+      height: 90px;
+    }
+
+    &__content-title {
+      font-size: 48px;
+      line-height: 64px;
+      margin-bottom: 25px;
+    }
+
+    &__content-text {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 40px;
+    }
+
+    &__content-link {
+      font-size: 24px;
+      line-height: 36px;
+      padding: 22px 78px;
+    }
+
+    &__box {
+      max-width: 460px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .top {
+    margin-top: 75px;
+
+    &__content {
+      padding-right: 1rem;
+    }
+
+    &__content-img {
+      height: 50px;
+    }
+
+    &__content-title {
+      font-size: 36px;
+      line-height: 45px;
+      margin-bottom: 25px;
+    }
+
+    &__content-text {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+
+    &__content-link {
+      font-size: 18px;
+      line-height: 27px;
+      padding: 19px 67px;
+    }
+
+    &__box {
+      max-width: 327px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .top {
+    text-align: center;
+
+    &__inner {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      align-items: center;
+    }
+
+    &__content {
+      order: 2;
+      padding-right: 0;
+    }
+
+    &__content-title {
+      font-size: 34px;
+    }
+
+    &__content-link {
+      padding: 24px 100px;
+    }
+
+    &__content-img {
+      display: none;
+    }
+
+    &__box {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 352px) {
+  .top {
+    &__content-title {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 20px;
+    }
+
+    &__content-text {
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 35px;
+    }
+
+    &__content-link {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 18px 80px;
+    }
   }
 }
